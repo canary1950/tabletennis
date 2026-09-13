@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>卓球フォーム総合AI分析 v3.9.19 Mobile Engine Select</title>
+<title>卓球フォーム総合AI分析 v3.9.20 Mobile Export Fix</title>
 <style>
 :root{--bg:#f5f7fb;--card:#fff;--ink:#152033;--muted:#667085;--line:#dbe3ef;--accent:#2563eb;--accent2:#0f766e;--bad:#b42318;--good:#067647}
 *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif}
@@ -128,7 +128,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px
 @media(max-width:900px){.dyn-grid{grid-template-columns:repeat(2,1fr)}}
 
 
-/* ===== v3.9.19 Mobile Engine Select support ===== */
+/* ===== v3.9.20 Mobile Export Fix support ===== */
 html, body { max-width: 100%; overflow-x: hidden; }
 body { -webkit-text-size-adjust: 100%; touch-action: manipulation; }
 button, input, select, textarea, label {
@@ -235,7 +235,7 @@ table {
 </head>
 <body>
 <header><div class="wrap">
-<h1>🏓 卓球フォーム総合AI分析 v3.9.19 Mobile Engine Select</h1>
+<h1>🏓 卓球フォーム総合AI分析 v3.9.20 Mobile Export Fix</h1>
 <p>MediaPipe Poseで骨格33点を検出し、関節角度・体幹・手首速度・リカバリーを数値化します。</p>
 </div></header>
 
@@ -344,8 +344,8 @@ table {
 
 
 <section id="dynamicsCard" class="card hidden">
-  <h2>v3.9.19 Mobile Engine Select 実測動作能力分析</h2>
-  <p class="muted">候補球の前後を高密度解析し、固定した身体基準による速度波形・加速立ち上がり・運動連鎖の立ち上がり時系列・打球後減速・次球準備を測ります。未検出項目は減点せず評価対象外にします。 v3.9.19 Mobile Engine Selectでは候補波形の品質を先に選別し、採用された通常球の中央値・下位球安定性に加えて「運動連鎖伝達効率」と「選手差判別指数」を中核指標にします。選手差判別指数は固定肩幅基準の実測手首速度を最も重くし、連鎖伝達・運動連鎖・加速立ち上がりを組み合わせ、上級者と中級者の差を過度に圧縮しない設計です。下半身・体幹側の動きが腕・手首の実測出力へどれだけ無駄なく伝わったかを、立ち上がり順序・各部位の速度増幅・実測手首速度・加速立ち上がりから評価します。姿勢点は補助指標として扱います。</p>
+  <h2>v3.9.20 Mobile Export Fix 実測動作能力分析</h2>
+  <p class="muted">候補球の前後を高密度解析し、固定した身体基準による速度波形・加速立ち上がり・運動連鎖の立ち上がり時系列・打球後減速・次球準備を測ります。未検出項目は減点せず評価対象外にします。 v3.9.20 Mobile Export Fixでは候補波形の品質を先に選別し、採用された通常球の中央値・下位球安定性に加えて「運動連鎖伝達効率」と「選手差判別指数」を中核指標にします。選手差判別指数は固定肩幅基準の実測手首速度を最も重くし、連鎖伝達・運動連鎖・加速立ち上がりを組み合わせ、上級者と中級者の差を過度に圧縮しない設計です。下半身・体幹側の動きが腕・手首の実測出力へどれだけ無駄なく伝わったかを、立ち上がり順序・各部位の速度増幅・実測手首速度・加速立ち上がりから評価します。姿勢点は補助指標として扱います。</p>
   <div id="dynamicsScores" class="dyn-grid"></div>
   <div class="wave-card">
     <h3>代表球の速度波形</h3>
@@ -355,7 +355,7 @@ table {
 </section>
 
 <section id="engineCard" class="card hidden">
-  <h2>v3.9.19 Mobile Engine Select 実測動作評価エンジン</h2>
+  <h2>v3.9.20 Mobile Export Fix 実測動作評価エンジン</h2>
   <p class="muted">v3.8では「今回の動画フォーム評価」と「蓄積型競技レベル」を分離します。1球ごとの点数も新方式へ統一し、1本の動画だけで競技力を断定しません。</p>
   <div id="engineScores" class="engine-grid"></div>
   <div id="engineAdvice" class="evidence-card"></div>
@@ -376,7 +376,7 @@ table {
 
 <section id="shotsCard" class="card hidden">
 <h2>1球ごとのAI採点 <span class="fast-note">スマホ版は候補画像なし</span></h2>
-<p class="muted">v3.9.19 Mobile Engine Selectでは各候補をまず「波形の明瞭さ・ピーク位置・打球後の落ち込み・判定情報」で品質選別し、その後に「固定肩幅基準の安定速度・加速立ち上がり・運動連鎖の球間再現性・打球後減速・次球準備」で評価します。旧方式の1球得点は表示しません。フォア／バック別の平均・最良球・改善球も、この新しい1球得点から計算します。ボール接触そのものを検出しているわけではありません。</p>
+<p class="muted">v3.9.20 Mobile Export Fixでは各候補をまず「波形の明瞭さ・ピーク位置・打球後の落ち込み・判定情報」で品質選別し、その後に「固定肩幅基準の安定速度・加速立ち上がり・運動連鎖の球間再現性・打球後減速・次球準備」で評価します。旧方式の1球得点は表示しません。フォア／バック別の平均・最良球・改善球も、この新しい1球得点から計算します。ボール接触そのものを検出しているわけではありません。</p>
 <div id="shots" class="shots"></div>
 </section>
 
@@ -400,6 +400,7 @@ table {
   <button id="clearAllHistoryBtn" class="warn">全選手の履歴を全削除</button>
 </div>
 <p class="muted">各記録を1件だけ消す場合は、下の一覧の「この1件を削除」を使います。全削除は確認後に実行されます。</p>
+<p class="muted">📱 iPhoneではJSON・CSV・分析レポートの書き出し時に共有メニューを開きます。「ファイルに保存」を選ぶと安全に保存できます。黒い画面へ移動しない方式です。</p>
 <div class="history-wrap">
 <table class="history-table">
 <thead><tr><th>日付</th><th>動画</th><th>動画評価</th><th>蓄積競技レベル</th><th>フォア</th><th>バック</th><th>重点課題</th><th>操作</th></tr></thead>
@@ -424,7 +425,7 @@ table {
 </section>
 
 <section class="card warn">
-<strong>このv3.9.19 Mobile Engine Selectで分かること / 分からないこと</strong><br>
+<strong>このv3.9.20 Mobile Export Fixで分かること / 分からないこと</strong><br>
 身体の姿勢・関節角度・実測動作・連鎖伝達・通常球能力を数値化し、1回ごとの分析カルテと複数回の推移を記録できます。履歴の上下は「成長／低下」と決めつけず、安定・変動・最近高め・最近低めなどの状態として表示します。一方、ラケット面角度、ボール回転量、正確なインパクト瞬間はPoseだけでは直接測れません。
 </section>
 <div id="playerModal" class="modal-backdrop hidden">
@@ -495,7 +496,7 @@ const playerSelect=$("playerSelect"), addPlayerBtn=$("addPlayerBtn"), editPlayer
 const playerModal=$("playerModal"), playerModalTitle=$("playerModalTitle"), playerNameInput=$("playerNameInput"), playerHandInput=$("playerHandInput");
 const cancelPlayerBtn=$("cancelPlayerBtn"), savePlayerBtn=$("savePlayerBtn"), playerConditionInput=$("playerConditionInput");
 const HISTORY_KEY="tt_ai_analysis_history_v36";
-const CARTE_SCHEMA="v3.9.19 Mobile Engine Select";
+const CARTE_SCHEMA="v3.9.20 Mobile Export Fix";
 const OLD_HISTORY_KEY="tt_ai_analysis_history_v35";
 const PLAYERS_KEY="tt_ai_players_v36";
 const ACTIVE_PLAYER_KEY="tt_ai_active_player_v36";
@@ -506,7 +507,7 @@ let editingPlayerId=null;
 let pose=null, videoURL=null, live=false, raf=null, analysisData=[], shotAnalysisData=[], shots=[];
 let analysisRunId=0;
 
-// v3.9.19 Mobile Engine Select performance cache:
+// v3.9.20 Mobile Export Fix performance cache:
 // the same candidate's dense dynamics were being recalculated many times
 // (shot score / efficiency / engine / output / quality). Cache by candidate time.
 let dynamicsCache=new Map();
@@ -745,7 +746,58 @@ function makeCartePayload(base){
   };
 }
 function escCsv(v){const s=String(v??"");return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s}
-function downloadBlob(text,type,name){const blob=new Blob([text],{type});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),0)}
+async function exportFileSafe(text,type,name){
+  const blob=new Blob([text],{type});
+  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform==="MacIntel" && navigator.maxTouchPoints>1);
+
+  // iPhone/iPad: prefer the native Share/Save sheet.
+  // This avoids Safari navigating to a Blob URL and showing a black screen.
+  try{
+    if(isIOS && typeof File!=="undefined" && navigator.share){
+      const fileObj=new File([blob],name,{type});
+      if(!navigator.canShare || navigator.canShare({files:[fileObj]})){
+        await navigator.share({files:[fileObj],title:name});
+        return {ok:true,method:"share"};
+      }
+    }
+  }catch(err){
+    // User cancelling the share sheet is not an app failure.
+    if(err?.name==="AbortError") return {ok:false,cancelled:true};
+    console.warn("Native file share failed; falling back to download.",err);
+  }
+
+  // Desktop / Android / iOS fallback:
+  // append the anchor to DOM and keep the Object URL alive long enough.
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=url;
+  a.download=name;
+  a.rel="noopener";
+  a.style.display="none";
+  document.body.appendChild(a);
+  a.click();
+
+  // iOS/Safari may need the Blob URL after the synthetic click has returned.
+  setTimeout(()=>{
+    try{URL.revokeObjectURL(url)}catch(e){}
+    try{a.remove()}catch(e){}
+  },30000);
+  return {ok:true,method:"download"};
+}
+
+function safeFileName(s){
+  return String(s||"player").replace(/[^a-zA-Z0-9ぁ-んァ-ヶ一-龠_-]+/g,"_");
+}
+
+async function exportJsonSafe(data,name){
+  const json=JSON.stringify(data,null,2);
+  return exportFileSafe(json,"application/json;charset=utf-8",name);
+}
+
+async function exportCsvSafe(csv,name){
+  return exportFileSafe(csv,"text/csv;charset=utf-8",name);
+}
 function carteKpi(label,value,small="/100"){
   const v=(value===null||value===undefined||value==="")?"—":value;
   return `<div class="carte-kpi"><strong>${v}</strong><small>${label}${small?` ${small}`:""}</small></div>`;
@@ -805,9 +857,45 @@ function compareCarte(id){
   openedCarte=x;savedCarteView.innerHTML=`<div class="carte-section"><h3>${x.playerName} の2回状態比較</h3><p>今回：${compactDate(x.savedAt)}${prev?` ／ 前回：${compactDate(prev.savedAt)}`:""}</p></div>`+renderCarteComparison(x,prev)+carteHTML(x,false);savedCarteCard.classList.remove("hidden");savedCarteCard.scrollIntoView({behavior:"smooth",block:"start"});
 }
 window.compareCarte=compareCarte;
-function printCarte(x){
-  if(!x)return;const w=window.open("","_blank");if(!w)return alert("印刷画面を開けませんでした。ポップアップを許可してください。");
-  const body=carteHTML(x,true);w.document.write(`<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>${x.playerName||"選手"} 分析カルテ</title><style>body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:#172033;margin:24px}.carte-section{border:1px solid #ccd7e6;border-radius:10px;padding:12px;margin:12px 0}.carte-head,.carte-compare-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.carte-kpi{border:1px solid #d8e1ed;border-radius:8px;padding:8px}.carte-kpi strong{display:block;font-size:20px}.carte-kpi small,.carte-muted{color:#667085}.carte-shot-table{width:100%;border-collapse:collapse;font-size:10px}.carte-shot-table th,.carte-shot-table td{border-bottom:1px solid #ddd;padding:5px;text-align:left}img{max-width:100%}button{display:none}@media print{details{display:block}.carte-section{break-inside:avoid}.carte-shot-table{font-size:9px}}</style></head><body><h1>卓球フォームAI分析カルテ v3.9.19 Mobile Engine Select</h1>${body}<script>window.onload=()=>setTimeout(()=>window.print(),250)<\/script></body></html>`);w.document.close();
+async function printCarte(x){
+  if(!x)return;
+  const body=carteHTML(x,true);
+  const reportHtml=`<!doctype html><html lang="ja"><head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>${x.playerName||"選手"} 分析カルテ</title>
+  <style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:#172033;margin:24px}
+  .carte-section{border:1px solid #ccd7e6;border-radius:10px;padding:12px;margin:12px 0}
+  .carte-head,.carte-compare-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .carte-kpi{border:1px solid #d8e1ed;border-radius:8px;padding:8px}.carte-kpi strong{display:block;font-size:20px}
+  img{max-width:100%}@media(max-width:700px){.carte-head,.carte-compare-grid{grid-template-columns:1fr 1fr}}
+  </style></head><body>${body}</body></html>`;
+
+  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform==="MacIntel" && navigator.maxTouchPoints>1);
+
+  if(isIOS){
+    // On iOS, popup printing can become a blank/black tab.
+    // Export a standalone HTML report via the native Save/Share sheet instead.
+    try{
+      await exportFileSafe(
+        reportHtml,
+        "text/html;charset=utf-8",
+        `table-tennis-report-${safeFileName(x.playerName)}-${new Date(x.savedAt).toISOString().slice(0,10)}.html`
+      );
+      alert("iPhoneでは分析レポートをHTMLファイルとして書き出しました。共有メニューから「ファイルに保存」できます。PDFが必要な場合は保存したレポートを開き、共有→プリント→PDF保存を利用してください。");
+    }catch(e){
+      console.error(e);alert("レポートの書き出しに失敗しました。");
+    }
+    return;
+  }
+
+  const w=window.open("","_blank");
+  if(!w)return alert("印刷画面を開けませんでした。ポップアップを許可してください。");
+  w.document.open();
+  w.document.write(reportHtml);
+  w.document.close();
+  w.onload=()=>setTimeout(()=>w.print(),150);
 }
 
 function deltaClass(v){return !Number.isFinite(v)||v===0?"change-flat":v>0?"change-up":"change-down"}
@@ -826,9 +914,19 @@ function renderHistoryTable(){
 }
 window.deleteHistoryEntry=id=>{const target=loadHistory().find(x=>String(x.id)===String(id));if(target&&!confirm(`${target.playerName||"この選手"} の ${compactDate(target.savedAt)} の分析カルテを削除しますか？`))return;saveHistoryStore(loadHistory().filter(x=>String(x.id)!==String(id)));if(openedCarte&&String(openedCarte.id)===String(id)){openedCarte=null;savedCarteCard.classList.add("hidden");savedCarteView.innerHTML=""}renderHistoryUI()}
 
-window.exportSingleCarte=id=>{
-  const x=loadHistory().find(h=>String(h.id)===String(id));if(!x)return;
-  const safe=(x.playerName||"player").replace(/[^a-zA-Z0-9ぁ-んァ-ヶ一-龠_-]+/g,"_");downloadBlob(JSON.stringify(x,null,2),"application/json",`table-tennis-carte-${safe}-${new Date(x.savedAt).toISOString().slice(0,10)}.json`);
+window.exportSingleCarte=async id=>{
+  const x=loadHistory().find(h=>String(h.id)===String(id));
+  if(!x)return alert("この分析記録が見つかりません。");
+  const safe=safeFileName(x.playerName||"player");
+  try{
+    await exportJsonSafe(
+      x,
+      `table-tennis-carte-${safe}-${new Date(x.savedAt).toISOString().slice(0,10)}.json`
+    );
+  }catch(e){
+    console.error(e);
+    alert("JSONの書き出しに失敗しました。");
+  }
 };
 window.printSavedCarte=id=>{const x=loadHistory().find(h=>String(h.id)===String(id));if(x)printCarte(x)};
 
@@ -1054,7 +1152,7 @@ function drawPose(lm, targetCtx=ctx, w=overlay.width, h=overlay.height){
   targetCtx.restore();
 }
 function captureFrame(lm){
-  // v3.9.19 Mobile Engine Select:
+  // v3.9.20 Mobile Export Fix:
   // On iPhone/Android, candidate images are not generated at all.
   if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) return null;
 
@@ -1396,7 +1494,7 @@ function shotMetricMap(raw, kind, extra={}){
   return Math.round(clamp(v,40,96));
 }
 function candidateQualityForShot(s,d){
-  // v3.9.19 Mobile Engine Select: candidate quality measures whether this looks like a distinct swing event,
+  // v3.9.20 Mobile Export Fix: candidate quality measures whether this looks like a distinct swing event,
   // not how good/fast the player is. Low-skill but clearly detected strokes remain eligible.
   if(!d?.valid)return 35;
   const series=d.series||[];
@@ -1751,7 +1849,7 @@ function accelerationTimingForShot(shot){
   return {score:58,offset:NaN,peakTime:NaN};
 }
 function efficiencyForShot(s){
-  // v3.9.19 Mobile Engine Select: measured-output / movement-cost efficiency.
+  // v3.9.20 Mobile Export Fix: measured-output / movement-cost efficiency.
   // A compact swing is not automatically efficient; it must actually create speed,
   // acceleration and a usable proximal-to-distal sequence.
   const d=dynamicsForShot(s);
@@ -1788,7 +1886,7 @@ function measuredOutputScoreForShot(s){
   if(!d?.valid)return NaN;
   // Output means what the player actually generated. Do not let clean posture
   // compensate for low measured speed.
-  // v3.9.19 Mobile Engine Select: player-separation output index. Peak speed is the main discriminator;
+  // v3.9.20 Mobile Export Fix: player-separation output index. Peak speed is the main discriminator;
   // rise and chain remain important, but cannot fully compensate for low actual output.
   return Math.round(clamp(weightedAvailable([
     [d.speedDynScore,.58],[d.riseDynScore,.17],[d.chainOrderScore,.17],[d.timingDynScore,.08]
@@ -2051,7 +2149,7 @@ function segmentPeak(series,key,from=-.44,to=.18){
   return percentileNum(a.map(x=>x[key]),.88);
 }
 function transferEfficiencyMetrics(series,peakV,chainOrderScore,riseDynScore,speedDynScore){
-  // v3.9.19 Mobile Engine Select: proximal -> distal transfer efficiency.
+  // v3.9.20 Mobile Export Fix: proximal -> distal transfer efficiency.
   // Same-unit translational speeds (shoulder-widths/sec) are used for hip/shoulder/elbow/wrist.
   // A very high wrist/elbow ratio alone is NOT rewarded; distal-only motion is penalized by
   // proximal participation and kinetic-chain onset order.
@@ -2101,7 +2199,7 @@ function dynamicsForShot(shot){
   const riseTime=(wristPeak&&pre.length)?Math.max(.06,wristPeak.t-medianNum(pre.map(x=>x.t))):NaN;
   const riseRate=(Number.isFinite(rise)&&Number.isFinite(riseTime))?rise/riseTime:NaN;
 
-  // v3.9.19 Mobile Engine Select kinetic chain: compare motion ONSET, not peak order.
+  // v3.9.20 Mobile Export Fix kinetic chain: compare motion ONSET, not peak order.
   // Overlap is allowed; only clearly distal-first starts are penalized strongly.
   const onsets={
     hip:onsetTimeFor(series,"hipVSm",-.54,.06),
@@ -2157,7 +2255,7 @@ function dynamicsForShot(shot){
   const transfer=transferEfficiencyMetrics(series,peakV,chainOrderScore,riseDynScore,speedDynScore);
   const transferScore=transfer.transferScore;
 
-  // v3.9.19 Mobile Engine Select: measured execution now includes whether proximal movement is actually
+  // v3.9.20 Mobile Export Fix: measured execution now includes whether proximal movement is actually
   // transferred into distal output, rather than treating chain order and hand speed separately.
   const dynamicsTotal=Math.round(clamp(weightedAvailable([
     [speedDynScore,.27],[riseDynScore,.18],[chainOrderScore,.18],[transferScore,.25],
@@ -2180,7 +2278,7 @@ function evaluateDynamics(shots){
   const vals=k=>items.map(x=>x.d[k]).filter(Number.isFinite);
   const avg=k=>{const v=vals(k);return v.length?mean(v):NaN;};
 
-  // v3.9.19 Mobile Engine Select chain consistency uses onset-time gaps across shots.
+  // v3.9.20 Mobile Export Fix chain consistency uses onset-time gaps across shots.
   const gapSets=[0,1,2].map(i=>items.map(x=>x.d.chainGaps?.[i]).filter(Number.isFinite));
   const gapSds=gapSets.map(robustSd).filter(Number.isFinite);
   const gapMeds=gapSets.map(medianNum);
@@ -2207,7 +2305,7 @@ function evaluateDynamics(shots){
   const readyScore=readyVals.length?Math.round(mean(readyVals)):NaN;
   const timingScore=timingVals.length?Math.round(mean(timingVals)):NaN;
 
-  // v3.9.19 Mobile Engine Select measured-execution score. The three discriminative measurements
+  // v3.9.20 Mobile Export Fix measured-execution score. The three discriminative measurements
   // (stable speed, acceleration rise, chain onset) carry 82% of the weight.
   // Next-ball readiness remains visible but is not part of the core score because
   // it can be confused with ordinary body translation in a single-camera pose video.
@@ -2334,7 +2432,7 @@ function selectQualityCandidates(shotScores){
 }
 
 function robustTypicalAbility(shotScores){
-  // v3.9.19 Mobile Engine Select: ordinary ability is calculated only from quality-selected candidates.
+  // v3.9.20 Mobile Export Fix: ordinary ability is calculated only from quality-selected candidates.
   // The median is the center; lower-half and Q25 define the floor. The best shot has no direct weight.
   const vals=shotScores.map(s=>s.total).filter(Number.isFinite).sort((a,b)=>a-b);
   if(!vals.length)return {score:NaN,median:NaN,lowerMean:NaN,lowerQuartile:NaN,lowStability:NaN,count:0};
@@ -2377,7 +2475,7 @@ function evaluateEngine(shotScores){
 
   const ordinary=robustTypicalAbility(all);
 
-  // v3.9.19 Mobile Engine Select TECHNICAL LEVEL = measured output quality + kinetic-chain quality.
+  // v3.9.20 Mobile Export Fix TECHNICAL LEVEL = measured output quality + kinetic-chain quality.
   // Pose neatness is only a small supporting term. This is designed so that two
   // players with similar-looking posture can still separate when actual output differs.
   const measuredSpeed=dynamics?.speedScore;
@@ -2389,7 +2487,7 @@ function evaluateEngine(shotScores){
     [safeAvg(all,"torsoScore"),.26],[safeAvg(all,"recoveryScore"),.22]
   ],NaN);
   const transferScore=dynamics?.transferScore;
-  // v3.9.19 Mobile Engine Select: measured-skill discrimination. Preserve differences in real output and
+  // v3.9.20 Mobile Export Fix: measured-skill discrimination. Preserve differences in real output and
   // proximal-to-distal transfer instead of allowing reproducibility/posture to flatten them.
   const separationRaw=weightedAvailable([
     [measuredSpeed,.45],[transferScore,.30],[measuredChain,.15],[measuredRise,.10]
@@ -2399,7 +2497,7 @@ function evaluateEngine(shotScores){
     [separationScore,.48],[outputMedian,.25],[transferScore,.14],[measuredChain,.07],[measuredRise,.04],[poseFoundation,.02]
   ],separationScore),35,97));
 
-  // v3.9.19 Mobile Engine Select EFFICIENCY = useful measured output divided by movement demand.
+  // v3.9.20 Mobile Export Fix EFFICIENCY = useful measured output divided by movement demand.
   // Typical and lower-quartile efficiency matter, so one explosive swing cannot dominate.
   const efficiencyLower=efficiencies.length?percentileNum(efficiencies,.25):NaN;
   const efficiencyMedian=efficiencies.length?medianNum(efficiencies):NaN;
@@ -2421,10 +2519,10 @@ function evaluateEngine(shotScores){
 
   const measuredExecution=Number.isFinite(dynamics?.dynamicsTotal)?dynamics.dynamicsTotal:NaN;
 
-  // v3.9.19 Mobile Engine Select OVERALL: ordinary-ball ability is the anchor after candidate-quality filtering.
+  // v3.9.20 Mobile Export Fix OVERALL: ordinary-ball ability is the anchor after candidate-quality filtering.
   // Technical output and efficiency still create player-to-player separation, while
   // one spectacular or doubtful candidate cannot define the session.
-  // v3.9.19 Mobile Engine Select overall: skill separation is intentionally visible. Typical-ball stability
+  // v3.9.20 Mobile Export Fix overall: skill separation is intentionally visible. Typical-ball stability
   // still matters, but it no longer overwhelms measured output/transfer differences.
   let overall=weightedAvailable([
     [techScore,.31],
@@ -2673,7 +2771,7 @@ function renderEngineEvaluation(shotScores){
   }[e.profile?.condition||"standard"];
 
   $("engineAdvice").innerHTML=`
-    <h3>個別コーチング評価 <span class="score-band">v3.9.19 Mobile Engine Select動画フォーム評価 ${e.overall}点</span></h3>
+    <h3>個別コーチング評価 <span class="score-band">v3.9.20 Mobile Export Fix動画フォーム評価 ${e.overall}点</span></h3>
     <p class="muted">旧方式の総合点は最終評価には使用していません。骨格の基礎指標としてのみ内部参照します。</p>
     <div class="evidence-grid">
       <div class="evidence-item"><strong>① 観察</strong><br>${c.observation}</div>
@@ -2698,7 +2796,7 @@ function renderEngineEvaluation(shotScores){
   $("grade").textContent=`今回の動画：${competitiveGrade(e.overall)}`;
   renderAccumulatedLevel(e);
   if(e.dynamics)renderDynamics(e.dynamics);
-  $("summary").textContent=`v3.9.19 Mobile Engine Select動画フォーム評価：技術 ${e.techScore}・選手差判別 ${e.separationScore}・再現性 ${e.reproScore}・効率 ${e.efficiencyScore}・連鎖伝達 ${Number.isFinite(e.transferScore)?e.transferScore:"—"}・通常球 ${e.ordinaryAbility}（中央値 ${Math.round(e.ordinaryMedian)} / 下位安定 ${e.lowerStability}）・候補品質 ${e.selection?.qualityMedian??"—"}（採用 ${e.selection?.selected.length??0}/${e.selection?.count??0}球）・加速タイミング ${e.timingScore}・個人内安定 ${e.personalScore}。`;
+  $("summary").textContent=`v3.9.20 Mobile Export Fix動画フォーム評価：技術 ${e.techScore}・選手差判別 ${e.separationScore}・再現性 ${e.reproScore}・効率 ${e.efficiencyScore}・連鎖伝達 ${Number.isFinite(e.transferScore)?e.transferScore:"—"}・通常球 ${e.ordinaryAbility}（中央値 ${Math.round(e.ordinaryMedian)} / 下位安定 ${e.lowerStability}）・候補品質 ${e.selection?.qualityMedian??"—"}（採用 ${e.selection?.selected.length??0}/${e.selection?.count??0}球）・加速タイミング ${e.timingScore}・個人内安定 ${e.personalScore}。`;
   window.__lastEngine=e;
   // Rebuild pending history entry after the competitive score is finalized.
   if(window.__legacyEvaluation && window.__lastShotScores){
@@ -2904,10 +3002,10 @@ function renderEvaluation(e){
   // The visible main score is written later by renderEngineEvaluation().
   window.__legacyEvaluation=e;
   $("totalScore").textContent="解析中";
-  $("grade").textContent="v3.9.19 Mobile Engine Select動画フォーム評価を計算中…";
+  $("grade").textContent="v3.9.20 Mobile Export Fix動画フォーム評価を計算中…";
   const lowerCount=analysisData.filter(d=>d.lowerBodyVisible).length;
   const lowerNote=lowerCount < Math.max(3,analysisData.length*.35) ? " ※脚の検出が少ないため下半身は参考値" : "";
-  $("summary").textContent=`骨格解析完了：${e.peakCount}回の打球候補を検出。v3.9.19 Mobile Engine Select動画フォーム評価を計算中です。平均膝角 ${fmtNum(e.avgKnee,0,"°")}、体幹傾斜 ${fmtNum(e.avgTorso,1,"°")}、肘可動域 ${fmtNum(e.elbowRange,0,"°")}。${lowerNote}`;
+  $("summary").textContent=`骨格解析完了：${e.peakCount}回の打球候補を検出。v3.9.20 Mobile Export Fix動画フォーム評価を計算中です。平均膝角 ${fmtNum(e.avgKnee,0,"°")}、体幹傾斜 ${fmtNum(e.avgTorso,1,"°")}、肘可動域 ${fmtNum(e.elbowRange,0,"°")}。${lowerNote}`;
 
   const items=[["構え",e.ready],["下半身",e.lower],["腕・前腕",e.arm],["体幹",e.torso],["リズム",e.rhythm],["リカバリー",e.recovery]];
   $("metrics").innerHTML=items.map(([n,v])=>`<div class="metric"><strong>${v}</strong><small>${n} / 100${n==="下半身"&&lowerNote?"（参考）":""}</small></div>`).join("")+
@@ -2923,7 +3021,7 @@ async function renderShots(peaks){
   const baseData=shotAnalysisData.length?shotAnalysisData:analysisData;
   const shotScores=[];
   for(let i=0;i<peaks.length;i++){
-    status.textContent=`v3.9.19 Mobile Engine Select 評価計算中… 候補 ${i+1}/${peaks.length}`;
+    status.textContent=`v3.9.20 Mobile Export Fix 評価計算中… 候補 ${i+1}/${peaks.length}`;
     shotScores.push(scoreShot(peaks[i],baseData));
     // Yield to the browser after every candidate so the UI never looks frozen.
     await new Promise(r=>setTimeout(r,0));
@@ -2985,7 +3083,7 @@ async function renderShots(peaks){
         <div>判定信頼度<br><strong>${s.strokeConfidence}%</strong></div>
         <div>判定根拠<br><strong>${s.strokeKey==='backhand'?'中心寄り軌道':s.strokeKey==='forehand'?'外側軌道':'不明'}</strong></div>
       </div>
-      <p>${shotAdvice(s)}</p><div class="shot-new-note">※この1球の総合点はv3.9.19 Mobile Engine Select方式。候補品質は「打球らしい波形の明瞭さ」を測り、能力点そのものには直接加点しません。${kept?'通常球評価に採用':'候補品質が相対的に低いため通常球評価から参考外'}。未検出項目は減点しません。連鎖伝達効率は実測した近位部から手首への速度増幅と立ち上がり順序を合わせて評価します。</div>
+      <p>${shotAdvice(s)}</p><div class="shot-new-note">※この1球の総合点はv3.9.20 Mobile Export Fix方式。候補品質は「打球らしい波形の明瞭さ」を測り、能力点そのものには直接加点しません。${kept?'通常球評価に採用':'候補品質が相対的に低いため通常球評価から参考外'}。未検出項目は減点しません。連鎖伝達効率は実測した近位部から手首への速度増幅と立ち上がり順序を合わせて評価します。</div>
       <button onclick="window.seekShot(${s.t})">この位置を再生</button>
     </div>`;
   }).join("");
@@ -3097,7 +3195,7 @@ analyzeBtn.onclick=async()=>{
 
     ensureCurrent();
     const e=evaluate(analysisData,peaks); renderEvaluation(e);
-    status.textContent=`骨格解析完了：${peaks.length}球の候補を検出。v3.9.19 Mobile Engine Select評価を順番に計算します…`;
+    status.textContent=`骨格解析完了：${peaks.length}球の候補を検出。v3.9.20 Mobile Export Fix評価を順番に計算します…`;
     ensureCurrent();
     await new Promise(r=>setTimeout(r,0));
     await renderShots(peaks);
@@ -3134,16 +3232,28 @@ saveHistoryBtn.onclick=()=>{
   status.textContent=`${p.name} の今回の分析を「分析カルテ」として保存しました。履歴の「呼び出す」から再表示できます。`;
   renderHistoryUI();openCarte(item.id);
 };
-exportHistoryBtn.onclick=()=>{
-  const p=activePlayer();downloadBlob(JSON.stringify(historyForPlayer(),null,2),"application/json",`table-tennis-history-${p.name.replace(/[^a-zA-Z0-9ぁ-んァ-ヶ一-龠_-]+/g,"_")}.json`);
+exportHistoryBtn.onclick=async()=>{
+  const p=activePlayer(),rows=historyForPlayer();
+  if(!rows.length)return alert("書き出す履歴がありません。");
+  try{
+    await exportJsonSafe(rows,`table-tennis-history-${safeFileName(p.name)}.json`);
+  }catch(e){
+    console.error(e);alert("履歴JSONの書き出しに失敗しました。");
+  }
 };
-exportCsvBtn.onclick=()=>{
+exportCsvBtn.onclick=async()=>{
   const p=activePlayer(),rows=historyForPlayer();
   const head=["保存日時","選手","動画","動画評価","蓄積競技レベル","技術水準","再現性","動作効率","連鎖伝達効率","通常球能力","通常球中央値","下位球安定","加速タイミング","個人内安定","フォア平均","バック平均","重点課題"];
   const body=rows.map(x=>[x.savedAt,x.playerName,x.videoName,x.overall,x.careerLevel,x.engine?.techScore??x.techScore,x.engine?.reproScore??x.reproScore,x.engine?.efficiencyScore??x.efficiencyScore,x.engine?.transferScore??x.transferScore,x.engine?.ordinaryAbility??x.ordinaryAbility,x.engine?.ordinaryMedian??x.ordinaryMedian,x.engine?.lowerStability??x.lowerStability,x.engine?.timingScore??x.timingScore,x.engine?.personalScore??x.personalScore,x.forehandAvg,x.backhandAvg,x.focus].map(escCsv).join(","));
-  const csv="\ufeff"+[head.map(escCsv).join(","),...body].join("\n");downloadBlob(csv,"text/csv;charset=utf-8",`table-tennis-history-${p.name.replace(/[^a-zA-Z0-9ぁ-んァ-ヶ一-龠_-]+/g,"_")}.csv`);
+  if(!rows.length)return alert("書き出す履歴がありません。");
+  const csv="\ufeff"+[head.map(escCsv).join(","),...body].join("\n");
+  try{
+    await exportCsvSafe(csv,`table-tennis-history-${safeFileName(p.name)}.csv`);
+  }catch(e){
+    console.error(e);alert("CSVの書き出しに失敗しました。");
+  }
 };
-printCarteBtn.onclick=()=>printCarte(openedCarte);
+printCarteBtn.onclick=async()=>{if(openedCarte)await printCarte(openedCarte)};
 exportCarteBtn.onclick=()=>{if(openedCarte)window.exportSingleCarte(openedCarte.id)};
 closeCarteBtn.onclick=()=>{openedCarte=null;savedCarteCard.classList.add("hidden");savedCarteView.innerHTML=""};
 clearPlayerHistoryBtn.onclick=()=>{
@@ -3177,7 +3287,7 @@ video.addEventListener("play",()=>{if(live)liveLoop()});
 video.addEventListener("pause",()=>{if(raf)cancelAnimationFrame(raf)});
 
 
-// ===== v3.9.19 Mobile Engine Select compatibility helpers =====
+// ===== v3.9.20 Mobile Export Fix compatibility helpers =====
 const IS_MOBILE = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 document.addEventListener("touchend", (ev) => {
